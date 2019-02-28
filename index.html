@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script type="text/javascript">
+		function ir(){
+			var senha = ((document.getElementById('texto').value) * 2 / 8 ) * 3;
+			var num = 11326881.75;
+			if (num == senha){
+				window.location.href = "/principal.html";
+			}
+			else{alert("senha incorreta");
+			var campo = document.getElementById('texto');
+			campo.value = '';
+
+			}
+		}
+	</script>
+	<style type="text/css">
+		html{height: 100%;}
+		body{
+			background-image: url("infinito.jpg");
+			background-repeat: no-repeat;
+			background-size:100% 100%;
+			}
+		div{
+			height: 200px;
+			width: 400px;
+		 	margin-top: 15%;
+		 	border: 2px;
+		 	border-color: black;
+		 	z-index: 9999999;
+		
+		 }
+		 h1{font-family: FreeMono, monospace;
+		 	color: white;
+    		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    	z-index: 9999999;}
+    	#but{
+    		color: white;
+    		text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    		background-color: transparent;
+ 
+    		font-family: FreeMono, monospace;
+    		font-size: 14px;
+    		z-index: 9999999;
+    		box-shadow: 1px 1px 2px black,
+
+    	}
+    	#texto{background-color: transparent;
+    		border-top: none;
+    		border-left: none;
+    		border-right: none;
+    		z-index: 9999999;
+    		box-shadow: 1px 1px 2px black,  0 0 5px darkblue;
+   
+    	}
+
+	</style>
+</head>
+<body>
+	<center>
+	<div>
+		<form action="javascript:ir();" method="post"> 
+			<center><h1>Oi, nossa senha...</h1></center>
+			<input type="password" name="senha" id="texto" autofocus="autofocus"><br><br>
+			<input type="submit" name="ir" value="ENTRAR" id="but">
+		</form>
+		
+	</div>
+
+    </center><!-- </body>--></body>
+</html>
